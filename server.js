@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -152,7 +153,7 @@ app.get("/:customListName", function(req,res){
 app.get("/about", function(req, res){
   res.render("about");
 });
-const port = process.env.PORT;
+
 app.listen(port, function() {
   console.log("Server started on port 3000");
 });
